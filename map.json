@@ -1,0 +1,29 @@
+{
+    "iterm2": [
+        {"key": "Ansi 0 Color", "col": "folded"},
+        {"key": "Ansi 8 Color", "col": "diffdel"},
+        {"key": "Ansi 1 Color", "col": "err1"},
+        {"key": "Ansi 9 Color", "col": "err"},
+        {"key": "Ansi 2 Color", "col": "string"},
+        {"key": "Ansi 10 Color", "col": "todo"},
+        {"key": "Ansi 3 Color", "col": "tag"},
+        {"key": "Ansi 11 Color", "col": "warning"},
+        {"key": "Ansi 4 Color", "col": "number"},
+        {"key": "Ansi 12 Color", "col": "function"},
+        {"key": "Ansi 5 Color", "col": "const"},
+        {"key": "Ansi 13 Color", "col": "instruction"},
+        {"key": "Ansi 6 Color", "col": "keyword"},
+        {"key": "Ansi 14 Color", "col": "type"},
+        {"key": "Ansi 7 Color", "col": "comment"},
+        {"key": "Ansi 15 Color", "col": "commentref"},
+        {"key": "Background Color", "col": "editor"},
+        {"key": "Foreground Color", "col": "text"},
+        {"key": "Link Color", "col": "link"},
+        {"key": "Bold Color", "col": "text"},
+        {"key": "Cursor Color", "col": "link"},
+        {"key": "Cursor Text Color", "col": "text"},
+        {"key": "Selection Color", "col": "folded"},
+        {"key": "Selected Text Color", "col": "text"}
+    ]
+}
+

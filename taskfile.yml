@@ -1,0 +1,11 @@
+version: '3'
+
+tasks:
+  generate:
+    desc: "Generate color scheme from templates."
+    aliases: ["gen"]
+    preconditions:
+      - sh: command -v go
+        msg: "Task requires go binary on path."
+    cmds:
+      - go run main.go
