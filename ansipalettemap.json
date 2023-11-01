@@ -24,6 +24,29 @@
         {"key": "Cursor Text Color", "col": "text"},
         {"key": "Selection Color", "col": "folded"},
         {"key": "Selected Text Color", "col": "text"}
+    ],
+    "kitty": [
+        {"key": "color0", "col": "folded"},
+        {"key": "color8", "col": "diffdel"},
+        {"key": "color1", "col": "err1"},
+        {"key": "color9", "col": "err"},
+        {"key": "color2", "col": "string"},
+        {"key": "color10", "col": "todo"},
+        {"key": "color3", "col": "tag"},
+        {"key": "color11", "col": "warning"},
+        {"key": "color4", "col": "number"},
+        {"key": "color12", "col": "function"},
+        {"key": "color5", "col": "const"},
+        {"key": "color13", "col": "instruction"},
+        {"key": "color6", "col": "keyword"},
+        {"key": "color14", "col": "type"},
+        {"key": "color7", "col": "comment"},
+        {"key": "color15", "col": "commentref"},
+        {"key": "background", "col": "editor"},
+        {"key": "foreground", "col": "text"},
+        {"key": "cursor", "col": "link"},
+        {"key": "selection_background", "col": "folded"},
+        {"key": "selection_foreground", "col": "text"}
     ]
 }
 

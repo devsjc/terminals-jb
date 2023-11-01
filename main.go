@@ -12,9 +12,23 @@ import (
 
 //go:embed templates/iterm2.xml
 var iterm2TemplateEmbed string
+//go:embed templates/kitty.conf
+var kittyTemplateEmbed string
 
-var TERMINAL_TEMPLATE_MAP = map[string]string{
-        "iterm2": iterm2TemplateEmbed,
+type terminalData struct {
+    Extension string
+    Template string
+}
+
+var TERMINAL_TEMPLATE_MAP = map[string]terminalData{
+        "iterm2": terminalData{
+            Extension: ".itermcolors", 
+            Template: iterm2TemplateEmbed,
+        },
+        "kitty": terminalData{
+            Extension: ".conf",
+            Template: kittyTemplateEmbed,
+        },
     }
 
 // --- Palette structs ---
@@ -60,7 +74,7 @@ func main() {
     }
 
     // Read ansi color map from file
-    ansiJson, err := os.ReadFile("map.json")
+    ansiJson, err := os.ReadFile("ansipalettemap.json")
     if err != nil {
         panic(err)
     }
@@ -75,7 +89,7 @@ func main() {
     // Render templates
     for stylename, palette := range palettes {
 
-        for terminalName, embeddedTemplate := range TERMINAL_TEMPLATE_MAP {
+        for terminalName, terminalData := range TERMINAL_TEMPLATE_MAP {
 
             // Create template data
             data := TemplateData{
@@ -89,13 +103,13 @@ func main() {
                 template.FuncMap{
                     "div": func(a, b int) float32 { return float32(a) / float32(b) },
                 },
-            ).Parse(embeddedTemplate)
+            ).Parse(terminalData.Template)
             if err != nil {
                 panic(err)
             }
 
             // Create the output file
-            f, err := os.Create("colors/jb-" + stylename + ".itermcolors")
+            f, err := os.Create("colors/jb-" + stylename + terminalData.Extension)
             if err != nil {
                 panic(err)
             }
