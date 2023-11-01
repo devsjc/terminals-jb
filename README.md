@@ -7,6 +7,12 @@
 
 ![Theme Screenshot](assets/screenshot.png)
 
+Usage
+---------------------------------------------------------------------------
+
+Download the relevant configuration file for the desired colorscheme style
+and terminal from the `colors/` directory. Update your terminal emulators'
+preferences to use the new colorscheme file as the default.
 
 Supported Terminals
 ---------------------------------------------------------------------------
