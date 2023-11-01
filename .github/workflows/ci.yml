@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  generate-templates:
+    runs-on: ubuntu-latest
+    container: golang:1.21
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install go-task
+        run: go install github.com/go-task/task/v3/cmd/task@latest
+      - name: Generate files
+        run: task gen
